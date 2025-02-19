@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Analysis</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Welcome, <span id="userEmail"></span></h1>
+        <div class="search-box">
+            <input type="text" id="query" placeholder="Enter search query">
+            <button id="searchButton">Search</button>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">Searching...</div>
+        <div id="results" class="results"></div>
+
+        <div class="visualization">
+            <h2>Top Searched Keywords</h2>
+            <div id="wordCloud"></div>
+        </div>
+
+        <div class="visualization">
+            <h2>Search Category Distribution</h2>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="visualization">
+            <h2>Search Trends Over Time</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+    <script src="static/chart-utils.js"></script>
+    <script src="static/wordcloud.js"></script>
+</body>
+</html>
